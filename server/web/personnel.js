@@ -19,7 +19,7 @@ $.ajax({
         })
         $('.blogs').html(trx)
     },error:function(err){
-        alert(err)
+        console.log("请求出错了")
     }    
 })
 function addNewArticle(){
