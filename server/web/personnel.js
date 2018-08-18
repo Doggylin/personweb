@@ -1,7 +1,7 @@
 $.ajax({
 
     type:'get',
-    url:'http://localhost:3000/webapi/list',
+    url:'http://18.217.137.92:3000/webapi/list',
     async:true,
     jsonp:'jsoncallback',
     success:function(data){
