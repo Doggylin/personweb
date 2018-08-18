@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>你只是个baby</title>
+    <link rel="stylesheet" href="./personnel.css">
+    <script src="http://libs.baidu.com/jquery/2.1.4/jquery.min.js"></script>
+</head>
+<body>
+    <div class="header">
+        <h1>Welcom to my personnel web</h1>
+        <p>Thank you , you can read some articles of my writed</p>
+    </div>
+    <div class="navbar">
+        <a href="./personnel.html">个人主页</a>
+        <a href="">电影推荐</a>
+        <a href="javascript:addNewArticle()" class="admin"">新文章</a>
+        <a href="" class="right">留言</a>
+
+    </div>
+    <div class="row">
+
+        <div class="side">
+            
+            <div class="mycard">
+                <div class="avatar">
+                    <img class="avatar_bg" src="./imgs/banner.png" alt="头像背景">
+                    <img class="avatar_avatar" src="./imgs/avatar.jpg" alt="头像">
+                </div>
+                <h3 style="text-align: center;margin: 0px;"> Hello world | 李春林</h3>
+                <p class="position">iOS软件开发工程师一枚</p>
+                <div class="desc">坐标深圳，偶尔写点H5,搞点小事情娱乐一下。</div>
+            </div>
+            <div class="chat">
+                <h3>who are you！</h3>
+                <div class="chat_room">
+                    
+                </div>
+                <input type="text" name="msg" id="" style="height: 40px;background-color:#ddd;width: 80%;border: none;padding-left: 10px;" value="有人么？？？">
+                <button style="float: right; width: 19.99%;height: 40px; background-color: #1abc9c;border: none;font-size: 14px;color: white">发送</button>
+            </div>            
+        </div>
+        <div class="blogs">
+            
+                                                
+        </div>
+    </div>
+    <div class="footer">
+        <h2>友情链接</h2>
+    </div>
+    <div class="addNewArticleView">
+        <a class="closeBtn" href="javascript:closeSelf()">关闭</a>
+        <form class="forms" action="/webapi/addlist" method="post" enctype="multipart/form-data">
+            <span class="intutView">
+                <label>标题
+                        <input type="text" name="title" id="">
+                </label>
+            </span>
+            <span class="intutView">
+                    <label>简要描述<input type="text" name="desc" id=""></label>
+            </span>
+            <span class="intutView">
+                <label>标签<input type="text" name="tag" id=""></label> 
+            </span>
+            <span class="intutView">
+                <label>图片地址<input type="text" name="imgurl" id=""></label> 
+            </span>
+            <div style="clear: both;position: absolute;top: 40px;left: 36px;">
+                <label>上传文章<input type="file" name="htmlfile" id=""></label>
+                <a href="http://soft.xiaoshujiang.com/index.html" target="__blank">写文章</a>
+            </div>
+            <button class="submitBtn" type="submit">提交</button>
+        </form>
+    </div>
+    <script src="./personnel.js"></script>
+</body>
+</html>

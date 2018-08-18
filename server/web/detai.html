@@ -1,0 +1,47 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+	<link rel="stylesheet" href="./mark.css">
+	<link rel="stylesheet" href="./personnel.css">
+    <script src="http://libs.baidu.com/jquery/2.1.4/jquery.min.js"></script>
+    <script src="./urlparam.js"></script>
+</head>
+<body style="background-color: white;">
+		<div class="navbar">
+        <a href="./personnel.html">个人主页</a>
+        <a href="">电影推荐</a>
+        <a href="" class="right">留言</a>
+		</div>
+		
+		<article style=" width: 70%;margin: 0px auto 0px;" class="content">
+			
+		</article>
+		
+			
+			
+</body>
+
+<script>
+	$.ajax({
+        type:'get',
+        url:'http://localhost:3000/webapi/getcontent'+UrlParam.paramValues("title"),
+        async:true,
+        jsonp:'jsoncallback',
+        success:function(data){	
+            $('.content').html(data)
+        },error:function(err){
+            alert(err.message)
+        }    
+    })
+</script>
+	
+</html>
+
+
+
+
