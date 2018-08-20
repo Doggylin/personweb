@@ -13,7 +13,7 @@ $.ajax({
             let tag = '<div class="bottom_bar"><span class="lm"><a href="" title="tag" target="_blank" class="classname">' + item.tag + '</a></span>'
             let time = '<span class="dtime">' + item.time + '</span>'
             let viewnum = '<span class="viewnum">浏览（<a href="">' + item.viewnum + '</a>）</span>'
-            let readmore = '<span class="readmore"><a href="./webapi/getcontent'+item.title+'">阅读原文</a></span></div></li>'
+            let readmore = '<span class="readmore"><a href="./detai.html?title='+item.title+'">阅读原文</a></span></div></li>'
             trx += img + title + des + tag + time + viewnum + readmore
 
         })
@@ -23,10 +23,12 @@ $.ajax({
     }    
 })
 function addNewArticle(){
-
-    $('.addNewArticleView').animate({
-        top:'332px'
-    })
+    
+    if (confirm("想要发文章？")){
+        $('.addNewArticleView').animate({
+            top:'332px'
+        })
+    }
 }
 function closeSelf(){
     $('.addNewArticleView').animate({
