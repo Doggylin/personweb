@@ -37,6 +37,9 @@ class bloghandle{
                 if (!imgurl){
                     throw new Error('imgurl为空')
                 }
+                if (!files.htmlfile.path){
+                    throw new Error('文件未上传')
+                }
                 var curdate = new Date()
                 form.uploadDir = path.normalize(__dirname + '/../temp/')
                 var oldPath = files.htmlfile.path
