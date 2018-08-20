@@ -1,9 +1,10 @@
 const express = require('express')
+const cors = require('cors')
 const config = require('./config/default')
 const router = require('./router/index')
 const db = require('./dbs/db')
 const app = express()
 app.use(express.static('./web'))
-
+app.use(cors())
 router.index(app)
 app.listen(config.port)
